@@ -1,0 +1,30 @@
+\documentclass{book}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[brazilian]{babel}
+\usepackage{hyperref}
+\usepackage{pgf-pie}
+\usepackage{tikz-dependency}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \pie[
+    explode = {0.1, 0.1, 0.1}
+  ]{
+    33.3/Algebra,
+    33.3/Analysis,
+    33.3/Geometry
+  }
+\end{tikzpicture}
+
+\begin{dependency}
+  \begin{deptext}[column sep=0.5cm]
+    \texttt{MAT201} \& \texttt{MAT301} \& \texttt{MAT401} \\
+ \end{deptext} 
+  \depedge{1}{2}{calculus}
+  \depedge{2}{3}{calculus}
+\end{dependency}
+  
+\end{document}
