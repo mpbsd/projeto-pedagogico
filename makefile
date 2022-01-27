@@ -13,6 +13,6 @@ build:
 	$(DOC_VIEWER) main.pdf
 
 clean:
-	rm main.aux main.log main.out main.pdf
+	rm main.aux main.lof main.log main.out main.pdf
 
 .PHONY: build clean

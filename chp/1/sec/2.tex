@@ -1,0 +1,50 @@
+\section{Dependency Trees}
+\label{sec:dependency-tree}
+
+\begin{figure}[htb]
+  % arvore de dependencias: calculo
+  \begin{dependency}[hide label, theme = simple]
+    \begin{deptext}[column sep=0.1cm, row sep=0.1cm]
+      \texttt{MAT101} \& \texttt{MAT201} \& \texttt{MAT301} \&
+      \texttt{MAT401} \& \texttt{MAT502} \& \texttt{MAT601} \&
+      \texttt{MAT701} \& \texttt{MAT801} \& \texttt{MAT802} \\
+    \end{deptext} 
+    \depedge{1}{2}{}
+    \depedge{2}{3}{}
+    \depedge{3}{4}{}
+    \depedge{3}{5}{}
+    \depedge{3}{6}{}
+    \depedge{4}{7}{}
+    \depedge{2}{8}{}
+    \depedge{3}{9}{}
+  \end{dependency}
+  \caption{Disciplinas que dependem de \texttt{MAT101}}
+  \label{fig:disciplinas-que-dependendem-de-mat101}
+\end{figure}
+  
+\begin{figure}[htb]
+  % arvore de dependencias: geometria
+  \centering
+  \begin{dependency}[hide label, theme = simple]
+    \begin{deptext}[column sep=0.1cm, row sep=0.1cm]
+      \texttt{MAT104} \& \texttt{MAT202} \& \texttt{MAT602} \\
+    \end{deptext} 
+    \depedge{1}{2}{}
+    \depedge{1}{6}{}
+  \end{dependency}
+  \caption{Disciplinas que dependem de \texttt{MAT104}}
+  \label{fig:disciplinas-que-dependem-de-mat104}
+\end{figure}
+
+\begin{figure}[htb]
+  % arvore de dependencias: didatica
+  \centering
+  \begin{dependency}[hide label, theme = simple]
+    \begin{deptext}[column sep=0.1cm, row sep=0.1cm]
+      \texttt{MAT503} \& \texttt{MAT604} \\
+    \end{deptext} 
+    \depedge{1}{2}{}
+  \end{dependency}
+  \caption{Disciplinas que dependem de \texttt{MAT503}}
+  \label{fig:disciplinas-que-dependem-de-mat503}
+\end{figure}

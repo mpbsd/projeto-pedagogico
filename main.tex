@@ -1,4 +1,4 @@
-\documentclass[landascap]{book}
+\documentclass{book}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -9,48 +9,11 @@
 
 \begin{document}
 
-% \begin{tikzpicture}
-%   \pie[
-%     explode = {0.1, 0.1, 0.1}
-%   ]{
-%     33.3/Algebra,
-%     33.3/Analysis,
-%     33.3/Geometry
-%   }
-% \end{tikzpicture}
+\listoffigures
 
-% arvore de dependencias: calculo
-\begin{dependency}[hide label, theme = simple]
-  \begin{deptext}[column sep=0.1cm, row sep=0.1cm]
-    \texttt{MAT101} \& \texttt{MAT201} \& \texttt{MAT301} \&
-    \texttt{MAT401} \& \texttt{MAT502} \& \texttt{MAT601} \&
-    \texttt{MAT701} \& \texttt{MAT801} \& \texttt{MAT802} \\
-  \end{deptext} 
-  \depedge{1}{2}{}
-  \depedge{2}{3}{}
-  \depedge{3}{4}{}
-  \depedge{3}{5}{}
-  \depedge{3}{6}{}
-  \depedge{4}{7}{}
-  \depedge{2}{8}{}
-  \depedge{3}{9}{}
-\end{dependency}
-  
-% arvore de dependencias: geometria
-\begin{dependency}[hide label, theme = simple]
-  \begin{deptext}[column sep=0.1cm, row sep=0.1cm]
-    \texttt{MAT104} \& \texttt{MAT202} \& \texttt{MAT602} \\
-  \end{deptext} 
-  \depedge{1}{2}{}
-  \depedge{1}{6}{}
-\end{dependency}
+\chapter{Chapter One}
 
-% arvore de dependencias: didatica
-\begin{dependency}[hide label, theme = simple]
-  \begin{deptext}[column sep=0.1cm, row sep=0.1cm]
-    \texttt{MAT503} \& \texttt{MAT604} \\
-  \end{deptext} 
-  \depedge{1}{2}{}
-\end{dependency}
+\input{chp/1/sec/1.tex}
+\input{chp/1/sec/2.tex}
 
 \end{document}
