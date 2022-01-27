@@ -3,17 +3,28 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[brazilian]{babel}
+\usepackage{booktabs}
+\usepackage{enumerate}
 \usepackage{hyperref}
+\usepackage{multirow}
 \usepackage{pgf-pie}
 \usepackage{tikz-dependency}
 
 \begin{document}
 
 \listoffigures
+\listoftables
 
 \chapter{Chapter One}
 
 \input{chp/1/sec/1.tex}
 \input{chp/1/sec/2.tex}
+
+\chapter{Chapter Two}
+
+\input{chp/2/sec/1.tex}
+
+\bibliography{bib/main.bib}
+\bibliographystyle{unsrt}
 
 \end{document}

@@ -8,11 +8,18 @@ else
 	DOC_VIEWER = zathura
 endif
 
-build:
+pdf:
+	$(TEX_ENGINE) main
+	$(DOC_VIEWER) main.pdf
+
+bib:
+	$(TEX_ENGINE) main
+	$(BIB_ENGINE) main
+	$(TEX_ENGINE) main
 	$(TEX_ENGINE) main
 	$(DOC_VIEWER) main.pdf
 
 clean:
-	rm main.aux main.lof main.log main.out main.pdf
+	rm main.aux main.blg main.lof main.log main.lot main.out main.pdf
 
-.PHONY: build clean
+.PHONY: pdf bib clean
