@@ -20,6 +20,6 @@ bib:
 	$(DOC_VIEWER) main.pdf
 
 clean:
-	rm main.aux main.blg main.lof main.log main.lot main.out main.pdf
+	rm main.aux main.bbl main.blg main.lof main.log main.lot main.out main.pdf
 
 .PHONY: pdf bib clean
