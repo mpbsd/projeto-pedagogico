@@ -1,33 +1,39 @@
-\documentclass{book}
+\documentclass[a4paper,12pt,leqno]{book}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage[brazilian]{babel}
+\usepackage[portuguese]{babel}
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{multirow}
 \usepackage{pgf-pie}
 \usepackage{tikz-dependency}
-
-\bibliographystyle{plain}
+\usepackage{siunitx}
 
 \newtheorem*{ementa}{Ementa}
 
+\bibliographystyle{plain}
+
+\includeonly{chp/01}
+
 \begin{document}
+
+\frontmatter
 
 \listoffigures
 \listoftables
+\tableofcontents
 
-\chapter{Chapter One}
+\mainmatter
 
-\input{chp/1/sec/1.tex}
-\input{chp/1/sec/2.tex}
+\include{chp/01}
+\include{chp/02}
 
-\chapter{Chapter Two}
-
-\input{chp/2/sec/1.tex}
+\backmatter
 
 \bibliography{bib/main.bib}
 
 \end{document}
+
+% https://tex.stackexchange.com/questions/446608/split-a-big-table-on-two-pages

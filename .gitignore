@@ -1,8 +1,9 @@
-main.aux
-main.bbl
-main.blg
-main.lof
-main.log
-main.lot
-main.out
-main.pdf
+.DS_Store
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lot
+*.out
+*.pdf

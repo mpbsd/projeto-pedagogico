@@ -1,5 +1,5 @@
-TEX_ENGINE = xelatex
 BIB_ENGINE = bibtex
+TEX_ENGINE = xelatex
 OPR_SYSTEM = $(shell uname -s)
 
 ifeq ($(OPR_SYSTEM), Darwin)
@@ -8,11 +8,13 @@ else
 	DOC_VIEWER = zathura
 endif
 
-pdf:
+draft:
 	$(TEX_ENGINE) main
 	$(DOC_VIEWER) main.pdf
 
-bib:
+.PHONY: draft final clean
+
+final:
 	$(TEX_ENGINE) main
 	$(BIB_ENGINE) main
 	$(TEX_ENGINE) main
@@ -20,6 +22,12 @@ bib:
 	$(DOC_VIEWER) main.pdf
 
 clean:
-	rm main.aux main.bbl main.blg main.lof main.log main.lot main.out main.pdf
-
-.PHONY: pdf bib clean
+	find . -type f -name "*.aux" | xargs rm -rf
+	find . -type f -name "*.bbl" | xargs rm -rf
+	find . -type f -name "*.blg" | xargs rm -rf
+	find . -type f -name "*.lof" | xargs rm -rf
+	find . -type f -name "*.log" | xargs rm -rf
+	find . -type f -name "*.lot" | xargs rm -rf
+	find . -type f -name "*.out" | xargs rm -rf
+	find . -type f -name "*.pdf" | xargs rm -rf
+	find . -type f -name "*.toc" | xargs rm -rf
